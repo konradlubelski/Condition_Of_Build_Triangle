@@ -1,16 +1,13 @@
-def is_positive_number(a, b, c):
-    if (a>0 and b>0 and c>0):
+def is_positive_number(x):
+    if (x>0 and (isinstance(x, int) or isinstance(x, float))):
         return True
+    else:
+        return False
 
 def code_of_condition(a, b, c):
 
-    if ((isinstance(a, float) or
-        isinstance(a, int)) and
-        (isinstance(b, float) or
-        isinstance(b, int)) and
-        (isinstance(c, float) or
-        isinstance(c, int)) and
-        is_positive_number(a, b, c)):
+    if (is_positive_number(a) and is_positive_number(b) and
+    is_positive_number(c)):
 
         list_with_sides = [a, b, c]
         
@@ -26,4 +23,4 @@ def code_of_condition(a, b, c):
     else:
         print("please enter a type: (float or integer) and positive lengths of sides")
 
-code_of_condition(5,5,6)
+code_of_condition(-3,5,6)
