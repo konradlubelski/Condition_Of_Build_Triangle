@@ -1,18 +1,18 @@
-def code_of_condition(length_1st_side_of_triangle,length_2nd_side_of_triangle,
- length_3rd_side_of_triangle):
+def is_positive_number(a, b, c):
+    if (a>0 and b>0 and c>0):
+        return True
 
-    if ((isinstance(length_1st_side_of_triangle, float) or
-        isinstance(length_1st_side_of_triangle, int) and
-        length_1st_side_of_triangle > 0) and
-        (isinstance(length_2nd_side_of_triangle, float) or
-        isinstance(length_2nd_side_of_triangle, int) and
-        length_2nd_side_of_triangle > 0) and
-        (isinstance(length_3rd_side_of_triangle, float) or
-        isinstance(length_3rd_side_of_triangle, int) and
-        length_3rd_side_of_triangle > 0)):
+def code_of_condition(a, b, c):
 
-        list_with_sides = [length_1st_side_of_triangle, length_2nd_side_of_triangle,
-         length_3rd_side_of_triangle]
+    if ((isinstance(a, float) or
+        isinstance(a, int)) and
+        (isinstance(b, float) or
+        isinstance(b, int)) and
+        (isinstance(c, float) or
+        isinstance(c, int)) and
+        is_positive_number(a, b, c)):
+
+        list_with_sides = [a, b, c]
         
         sorted_list = sorted(list_with_sides)
 
@@ -26,4 +26,4 @@ def code_of_condition(length_1st_side_of_triangle,length_2nd_side_of_triangle,
     else:
         print("please enter a type: (float or integer) and positive lengths of sides")
 
-code_of_condition(2,5,1)
+code_of_condition(5,5,6)
