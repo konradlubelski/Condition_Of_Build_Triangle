@@ -1,4 +1,4 @@
-# Condition_Of_Build_Triangle
+# Condition_Of_Create_Triangle
 
 Checking condition of create triangle.
 
